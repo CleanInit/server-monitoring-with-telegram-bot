@@ -1,0 +1,7 @@
+{
+    "BOT_TOKEN": "",
+    "CHAT_ID": 1,
+    "WARNING_USAGE_CPU": 1.0,
+    "WARNING_USAGE_RAM": 1.0,
+    "WARNING_USAGE_DISK": 1.0
+}
