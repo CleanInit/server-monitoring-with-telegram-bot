@@ -11,7 +11,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, maxos-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
      - name: Проверка кода    
        uses: actions/checkout@v4
