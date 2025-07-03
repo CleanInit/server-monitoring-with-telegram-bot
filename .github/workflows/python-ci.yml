@@ -1,0 +1,29 @@
+name: Code tests on  Linux, Windows, MacOS
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, maxos-latest]
+    steps:
+     - name: Проверка кода    
+       uses: actions/checkout@v4
+
+     - name: Установка Питона.
+       uses: actions/setup-python@v5
+       with:
+        python-version: "3.11"
+        cache: 'pip'
+
+     - name: Установка зависимостей
+       run: pip install -r requirements.txt
+
+     - name: Запуск тестов
+       run: pytest
